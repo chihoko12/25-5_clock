@@ -4,7 +4,7 @@ class LengthControl extends Component {
   render() {
     return (
       <div className="length-control">
-        <div id={this.props.titleID}>{this.props.title}</div>
+        <h2 className="control-title" id={this.props.titleID}>{this.props.title}</h2>
         <button
           className="btn-level"
           id={this.props.minID}
@@ -14,7 +14,7 @@ class LengthControl extends Component {
           <i className="fa fa-arrow-down fa-2x" />
         </button>
 
-        <div className="btn-level" id={this.props.lengthID}>{this.props.length}</div>
+        <span className="btn-level" id={this.props.lengthID}>{this.props.length}</span>
 
         <button
           className="btn-level"

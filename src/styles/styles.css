@@ -1,24 +1,83 @@
 body {
-  background: #1e555c;
-  color: white;
-  font-size: 30px;
+  background:linear-gradient(135deg,#f8f9fa,#e9ecef);
+  color: #343a40;
+  font-size: 20px;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
-#root {
-  display: flex;
+#container {
+  display:flex;
   height: 100vh;
+  background: #ffffff;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .main-title {
-  font-size: 50px;
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
 .length-control {
-  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:250px;
+}
+
+.control-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+.btn-level {
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-level, .length-control {
+  display: inline-block;
+}
+
+.btn-level:hover {
+  background-color: #0056b3;
+}
+.controls span {
+  font-size:30px;
+  margin:10px;
+  width: 40px;
+}
+
+.timer {
+  border: 7px solid #6c757d;
+  border-radius: 15px;
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
@@ -29,50 +88,37 @@ button {
   cursor: pointer;
 }
 
-.btn-level,
-.length-control {
-  display: inline-block;
-}
-
-.btn-level .btn-level:nth-child(3),
-.length-control .btn-level:nth-child(3) {
-  width: 40px;
-}
-
-.timer {
-  border: 7px solid #13353a;
-  margin: 20px auto 10px auto;
-  width: 270px;
-  height: 160px;
-  border-radius: 50px;
-  position: relative;
-}
-
-.timer-wrapper {
-  position: absolute;
-  width: 190px;
-  height: 110px;
-  left: 50%;
-  top: 50%;
-  margin-left: -95px;
-  margin-top: -57px;
+#timer-label {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color:#6c757d;
 }
 
 #time-left {
-  font-family: digital;
-  font-size: 80px;
+  font-family: 'Digital', sans-serif;
+  font-size: 48px;
+  color: #007bff;
 }
 
-.timer-control button:active {
-  color: #13353a;
+.timer-control {
+  display: block;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.timer-control button{
+  color: #007bff;
+}
+
+.timer-control i {
+  margin-right: 1rem;
 }
 
 .author {
   text-align: center;
-  font-family: 'Share Tech Mono', sans-serif;
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 14px;
-  color: #a50d0d;
+  color: #6c757d;
 }
 
 .author a {

@@ -193,25 +193,28 @@ class Clock extends Component {
   render() {
     return (
       <div>
-        <div className="main-title">25+5 Clock</div>
-        <LengthControl
-          addID="break-increment"
-          length={this.state.breakLength}
-          lengthID="break-length"
-          minID="break-decrement"
-          onClick={this.setBreakLength}
-          title="Break Length"
-          titleID="break-label"
-        />
-        <LengthControl
-          addID="session-increment"
-          length={this.state.sessionLength}
-          lengthID="session-length"
-          minID="session-decrement"
-          onClick={this.setSessionLength}
-          title="Session Length"
-          titleID="session-label"
-        />
+        <h1 className="main-title">25+5 Clock</h1>
+          <div className="controls">
+                    <LengthControl
+                      addID="break-increment"
+                      length={this.state.breakLength}
+                      lengthID="break-length"
+                      minID="break-decrement"
+                      onClick={this.setBreakLength}
+                      title="Break Length"
+                      titleID="break-label"
+                    />
+                    <LengthControl
+                      addID="session-increment"
+                      length={this.state.sessionLength}
+                      lengthID="session-length"
+                      minID="session-decrement"
+                      onClick={this.setSessionLength}
+                      title="Session Length"
+                      titleID="session-label"
+                    />
+          </div>
+
         <div className="timer" style={this.state.alarmColor}>
           <div className="timer-wrapper">
             <div id="timer-label">{this.state.timerType}</div>
@@ -220,8 +223,8 @@ class Clock extends Component {
         </div>
         <div className="timer-control">
           <button id="start_stop" onClick={this.timerControl}>
-            <i className="fa fa-play fa-2x" style={{ marginRight: "2rem" }} />
-            <i className="fa fa-pause fa-2x" style={{ marginRight: "2rem" }}  />
+            <i className="fa fa-play fa-2x" />
+            <i className="fa fa-pause fa-2x" />
           </button>
           <button id="reset" onClick={this.reset}>
             <i className="fa fa-refresh fa-2x" />
